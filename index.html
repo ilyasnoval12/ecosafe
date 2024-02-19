@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32-CAM Video Streaming</title>
+</head>
+<body>
+    <h1>ESP32-CAM Video Streaming</h1>
+    <video id="streamingVideo" controls autoplay></video>
+
+    <script>
+        // Ambil alamat streaming dari Firebase atau sumber lainnya
+        var streamingURL = "URL_STREAMING_ESP32_CAM";
+
+        // Atur sumber video ke elemen video
+        var video = document.getElementById('streamingVideo');
+        video.src = streamingURL;
+
+        // Tampilkan pesan jika browser tidak mendukung video
+        video.addEventListener('error', function() {
+            alert("Browser tidak mendukung pemutaran video.");
+        });
+    </script>
+</body>
+</html>
